@@ -1,0 +1,32 @@
+package com.example.buymesomething.entities;
+
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Entity
+@Table(name = "ItemReceived")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class ItemReceivedEntity {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    Long id;
+    Long requestid;
+    Long senderId;
+    String Item;
+    Long cost;
+    Long quantity;
+    Long acceptedBy;
+    LocalDateTime createdAt;
+    LocalDateTime expireAt;
+      Boolean fallback;
+}
