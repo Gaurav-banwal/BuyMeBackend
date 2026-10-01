@@ -21,6 +21,8 @@ public class ItemRequestsEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     Long senderId;
+    String senderUsername;
+    String senderPhno;
     String Item;
     Long cost;
     Long quantity;
