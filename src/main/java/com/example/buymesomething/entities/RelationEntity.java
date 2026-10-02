@@ -23,7 +23,7 @@ public class RelationEntity {
     Long relationId;
     Long sender;
     Long receiver;
-    LocalDateTime dateofRequest;
+    LocalDateTime dateOfRequest;
     Boolean accepted;
 
 

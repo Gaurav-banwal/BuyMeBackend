@@ -1,9 +1,6 @@
 package com.example.buymesomething.dto;
 
-import jakarta.validation.constraints.Max;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.*;
 
 import java.time.LocalDateTime;
 
@@ -27,8 +24,10 @@ public class ItemReceivedDTO {
       @Max(value = 20)
     Long quantity;
      @NotBlank
+     @Positive
     Long acceptedBy;
 
+     @PastOrPresent
     LocalDateTime createdAt;
 
     LocalDateTime expireAt;
